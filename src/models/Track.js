@@ -11,7 +11,7 @@ const pointSchema = new mongoose.Schema({
         heading: Number,
         speed: Number
     }
-})
+});
 
 
 const trackSchema = new mongoose.Schema({
@@ -24,4 +24,6 @@ const trackSchema = new mongoose.Schema({
         default: ''
     },
     locations: [pointSchema]
-})
+});
+
+mongoose.model("Track", trackSchema);
